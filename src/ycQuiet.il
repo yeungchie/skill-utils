@@ -4,21 +4,21 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-defmacro( ycQuiet (\@rest body)
+defmacro( ycQuiet (\@key stdprint warnprint errprint \@rest body "gggl")
     unless(_ycQuiet.port && openportp(_ycQuiet.port)
         _ycQuiet.port = outfile("/dev/null")
     )
     `let((poport(poport) woport(woport) errport(errport))
-        unless(_ycQuiet.std
+        unless(,stdprint
             poport = _ycQuiet.port
         )
-        unless(_ycQuiet.warn
+        unless(,warnprint
             woport = _ycQuiet.port
         )
-        unless(_ycQuiet.err
+        unless(,errprint
             errport = _ycQuiet.port
         )
-        car(errset({nil ,@body} _ycQuiet.errset))
+        car(errset(prog2(nil {,@body} ,warnprint && t || getWarn()) ,errprint))
     )
 )
 

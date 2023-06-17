@@ -18,10 +18,7 @@ defmacro( ycQuiet (\@rest body)
         unless(_ycQuiet.err
             errport = _ycQuiet.port
         )
-        car(if(_ycQuiet.errset
-
-        ))
-        car(errset({nil ,@body} _ycQuiet.err))
+        car(errset({nil ,@body} _ycQuiet.errset))
     )
 )
 

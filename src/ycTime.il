@@ -4,19 +4,16 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-defmacro( ycTime (\@rest body)
+defmacro( ycTime (\@key format("%f") suffix("s") \@rest body "ttgl")
     `{
         _ycTime.used = measureTime(
             _ycTime.result = car(errset({nil ,@body} t))
         )
-        unless(_ycTime.format && stringp(_ycTime.format)
-            _ycTime.format = "%f"
-        )
         foreach((fmt time)
             list(
-                strcat("UserTime  : " _ycTime.format "\n")
-                strcat("SysTime   : " _ycTime.format "\n")
-                strcat("WallClock : " _ycTime.format "\n")
+                strcat("UserTime  : " ,format ,suffix "\n")
+                strcat("SysTime   : " ,format ,suffix "\n")
+                strcat("WallClock : " ,format ,suffix "\n")
             )
             _ycTime.used
             printf(fmt time)

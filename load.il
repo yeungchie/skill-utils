@@ -6,5 +6,6 @@
 
 ycLoadi("src/ycTime.il")
 ycLoadi("src/ycQuiet.il")
+ycLoadi("src/ycListAssign.il")
 
 ; END

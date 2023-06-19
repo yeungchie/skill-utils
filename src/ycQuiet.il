@@ -4,6 +4,8 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
+; 安静模式执行某段代码，不会在 CIW 打印任何信息
+
 defmacro( ycQuiet (\@key stdprint warnprint errprint \@rest body "gggl")
     unless(_ycQuiet.port && openportp(_ycQuiet.port)
         _ycQuiet.port = outfile("/dev/null")

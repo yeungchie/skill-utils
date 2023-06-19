@@ -4,6 +4,8 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
+; 快速计算某段代码的耗时
+
 defmacro( ycTime (\@key format("%f") suffix("s") \@rest body "ttgl")
     `{
         _ycTime.used = measureTime(

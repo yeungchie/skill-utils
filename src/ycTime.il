@@ -6,7 +6,7 @@
 
 ; 快速计算某段代码的耗时
 
-defmacro( ycTime (\@key format("%f") suffix("s") \@rest body "ttgl")
+defmacro( ycTime (\@key format("%f") suffix("s") \@rest body)
     `{
         _ycTime.used = measureTime(
             _ycTime.result = car(errset({nil ,@body} t))

@@ -10,5 +10,6 @@ ycLoadi("src/ycError.il")
 ycLoadi("src/ycTime.il")
 ycLoadi("src/ycQuiet.il")
 ycLoadi("src/ycListAssign.il")
+ycLoadi("src/ycStringIncrease.il")
 
 ; END

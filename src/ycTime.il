@@ -13,12 +13,12 @@ defmacro( ycTime (\@key format("%f") suffix("s") \@rest body)
         )
         foreach((fmt time)
             list(
-                strcat("UserTime  : " ,format ,suffix "\n")
-                strcat("SysTime   : " ,format ,suffix "\n")
-                strcat("WallClock : " ,format ,suffix "\n")
+                "UserTime "
+                "SysTime  "
+                "WallClock"
             )
             _ycTime.used
-            printf(fmt time)
+            printf(strcat(fmt " : " ,format ,suffix "\n") time)
         )
         prog1(
             _ycTime.result

@@ -5,7 +5,6 @@
 ;--------------------------
 
 alias( len  length               )
-alias( sel  geGetSelSet          )
 alias( uniq removeListDuplicates )
 alias( des  describe             )
 

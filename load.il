@@ -11,5 +11,6 @@ ycLoadi("src/ycListAssign.il")
 ycLoadi("src/ycStringNumAdd.il")
 ycLoadi("src/ycStringIncrease.il")
 ycLoadi("src/ycRange.il")
+ycLoadi("src/ycForeachOnCIW.il")
 
 ; END

@@ -4,7 +4,7 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-procedure(ycCat(fileName \@optional)
+procedure(ycCat(fileName \@optional chomp "tg")
     prog((fh item strings)
         unless(isFile(fileName)
             ycWarn("no such file - %s\n" fileName)

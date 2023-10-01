@@ -4,10 +4,26 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-alias(len length)
-alias(uniq removeListDuplicates)
-alias(des describe)
-alias(strincr ycStringIncrease)
-alias(ciwforeach ycForeachOnCIW)
+procedure(ycSkillAliasFuncEnable(bool "g")
+    let((funcs)
+        funcs = '(
+            ( len           length               )
+            ( uniq          removeListDuplicates )
+            ( des           describe             )
+            ( strincr       ycStringIncrease     )
+            ( ciwforeach    ycForeachOnCIW       )
+            ( d2b           ycDecimalToBinary    )
+        )
+
+        foreach(item funcs
+            eval(if(bool
+                cons('alias item)
+                list('unalias car(item))
+            ))
+        )
+
+        t
+    )
+)
 
 ; END

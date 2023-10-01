@@ -13,5 +13,7 @@ ycLoadi("src/ycStringIncrease.il")
 ycLoadi("src/ycRange.il")
 ycLoadi("src/ycForeachOnCIW.il")
 ycLoadi("src/ycDecimalToBinary.il")
+ycLoadi("src/ycCat.il")
+ycLoadi("src/ycWriteToFile.il")
 
 ; END

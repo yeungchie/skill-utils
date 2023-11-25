@@ -1,6 +1,6 @@
 #!/bin/bash
 #--------------------------
-# Program  : skill_code_checker.pl
+# Program  : skill-utils(skillCodeChecker.sh)
 # Language : Bash
 # Author   : YEUNGCHIE
 #--------------------------

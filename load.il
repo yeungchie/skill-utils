@@ -16,5 +16,6 @@ ycLoadi("src/ycDecimalToBinary.il")
 ycLoadi("src/ycCat.il")
 ycLoadi("src/ycWriteToFile.il")
 ycLoadi("src/ycReverseTable.il")
+ycLoadi("src/ycChomp.il")
 
 ; END

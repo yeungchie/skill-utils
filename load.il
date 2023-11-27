@@ -20,5 +20,8 @@ ycLoadi("src/ycChomp.il")
 
 ; nth
 ycLoadi("src/nth/ycNthReplace.il")
+ycLoadi("src/nth/ycNth.il")
+ycLoadi("src/nth/ycLast1.il")
+ycLoadi("src/nth/ycLast2.il")
 
 ; END

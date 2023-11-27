@@ -18,4 +18,7 @@ ycLoadi("src/ycWriteToFile.il")
 ycLoadi("src/ycReverseTable.il")
 ycLoadi("src/ycChomp.il")
 
+; nth
+ycLoadi("src/nth/ycNthReplace.il")
+
 ; END

@@ -7,19 +7,19 @@
 procedure(ycPrettyStringArray(array \@optional join(" ") "lt")
     let((i j strlenArray max widths)
         unless(array
-            ycError("%s: argument #1 is nil" array)
+            ycError("argument #1 is nil" array)
         )
 
         i = 0
         j = 0
         strlenArray = foreach(mapcar row array
             unless(pairp(row)
-                ycError("%s: argument #1[%d] should be a valid list - %A" i row)
+                ycError("argument #1[%d] should be a valid list - %A" i row)
             )
             prog1(
                 foreach(mapcar x row
                     unless(stringp(x)
-                        ycError("%s: argument #1[%d][%d] should be a string - %A" i j x)
+                        ycError("argument #1[%d][%d] should be a string - %A" i j x)
                     )
                     j++
                     strlen(x)
@@ -52,9 +52,6 @@ procedure(ycPrettyStringArray(array \@optional join(" ") "lt")
                     car(row)
                 else
                     row = reverse(row)
-                    ; strings = foreach(mapcar (width str) widths reverse(cdr(row))
-                    ;     sprintf(nil sprintf(nil "%%-%ds" width) str)
-                    ; )
                     strings = foreach(mapcar (width str) widths reverse(cdr(row))
                         sprintf(nil sprintf(nil "%%-%ds" width) str)
                     )

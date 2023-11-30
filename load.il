@@ -16,7 +16,8 @@ ycLoadi("src/ycDecimalToBinary.il")
 ycLoadi("src/ycCat.il")
 ycLoadi("src/ycWriteToFile.il")
 ycLoadi("src/ycReverseTable.il")
-ycLoadi("src/ycChomp.il")
+ycLoadi("src/ycPrettySort.il")
+ycLoadi("src/ycPrettyStringArray.il")
 
 ; nth
 ycLoadi("src/nth/ycNthReplace.il")

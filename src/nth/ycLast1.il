@@ -5,7 +5,7 @@
 ;--------------------------
 
 procedure(ycLast1(dataList "l")
-    car(reverse(dataList))
+    car(last(dataList))
 )
 
 ; END

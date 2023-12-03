@@ -12,26 +12,26 @@
 ; ycNth( "0 3 -1" data )        => ( 1 4 6 )
 
 procedure(ycNth(index dataList "gl")
-    let((tips start end step new)
+    let((tips new)
         tips = "argument #1 should be a int or int list or string"
         cond(
             (fixp(index)
-                new = if(index >= 0
-                    nth(index       dataList)
-                    nth(-index-1    reverse(dataList))
-                )
+                nth(ycNthRealIndex(index dataList) dataList)
             )
             (pairp(index)
                 unless(forall(x index fixp(x))
                     ycError("%s - %A" tips index)
                 )
-                start = nth(0 index)
-                end   = nth(1 index) || start
-                step  = nth(2 index) || 1
-                while(start <= end
-                    new = append1(new ycNth(start dataList))
-                    start += step
+                let((start end step)
+                    start = ycNthRealIndex(nth(0 index) dataList)
+                    end   = ycNthRealIndex((nth(1 index) || start) dataList)
+                    step  = nth(2 index) || 1
+                    while(start <= end
+                        new = cons(ycNth(start dataList) new)
+                        start += step
+                    )
                 )
+                reverse(new)
             )
             (stringp(index)
                 foreach(x parseString(index)
@@ -39,15 +39,15 @@ procedure(ycNth(index dataList "gl")
                         unless(num = atoi(x)
                             ycError("error index in string - %A" x)
                         )
-                        new = append1(new ycNth(num dataList))
+                        new = cons(ycNth(ycNthRealIndex(num dataList) dataList) new)
                     )
                 )
+                reverse(new)
             )
             (t
                 ycError("%s - %A" tips index)
             )
         )
-        new
     )
 )
 

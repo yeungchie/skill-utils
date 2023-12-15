@@ -13,6 +13,7 @@ procedure(ycStringIncrease(str \@optional num(1) "tn")
             ycError("argument #1 should be a string and have a char for number - %A" str)
         )
         ycRegExCase(str
+            ?dontMapObj t
             (lsprintf("^(.*?)(%s)$" nump)
                 ; 数字结尾作为目标
                 ; "net1", "net2", "net_3"

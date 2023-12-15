@@ -9,7 +9,7 @@
 procedure(ycStringIncrease(str \@optional num(1) "tn")
     let((nump format _num)
         nump = "-?\\d+\\.?\\d*|-?\\.\\d+"
-        unless(ycRegEx(str nump)
+        unless(ycRegEx(str nump nil nil "\\0" t)
             ycError("argument #1 should be a string and have a char for number - %A" str)
         )
         ycRegExCase(str

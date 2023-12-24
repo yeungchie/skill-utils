@@ -5,7 +5,7 @@
 ;--------------------------
 
 procedure(ycReadDesignTree(fileName "t")
-    prog((rows uniq item topLibs topCells topViews lcvList)
+    prog((rows uniq topLibs topCells topViews lcvList)
         unless(isFile(fileName)
             ycWarn("no such file - %s" fileName)
             return()

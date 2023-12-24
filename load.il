@@ -18,6 +18,7 @@ ycLoadi("src/ycReverseTable.il")
 ycLoadi("src/ycPrettySort.il")
 ycLoadi("src/ycPrettyStringArray.il")
 ycLoadi("src/ycStrftime.il")
+ycLoadi("src/ycTimeForecast.il")
 
 ; nth
 ycLoadi("src/nth/load.il")

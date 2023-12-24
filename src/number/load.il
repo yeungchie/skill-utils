@@ -4,6 +4,7 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
+ycLoadi("alias.il")
 ycLoadi("ycNumToBin.il")
 
 ; END

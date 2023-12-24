@@ -6,5 +6,6 @@
 
 ycLoadi("alias.il")
 ycLoadi("ycNumToBin.il")
+ycLoadi("ycNumToOct.il")
 
 ; END

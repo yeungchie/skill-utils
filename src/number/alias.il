@@ -6,5 +6,6 @@
 
 alias(d2b ycNumToBin)
 alias(d2o ycNumToOct)
+alias(d2h ycNumToHex)
 
 ; END

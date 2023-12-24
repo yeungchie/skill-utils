@@ -4,18 +4,23 @@
 ; Author   : YEUNGCHIE
 ;--------------------------------
 
-procedure(ycDecimalToBinary(num "x")
-    prog((remnum remnumList string)
+procedure(ycDecimalToBinary(num \@optional minWidth(0) "xx")
+    prog((remnum remnumList)
         when(zerop(num)
             remnumList = list("0")
         )
         while(num > 0
             remnum = remainder(num 2)
-            remnumList = cons(artMakeString(remnum) remnumList)
+            remnumList = cons(lsprintf("%d" remnum) remnumList)
             num /= 2
         )
-        string = strcat("0b" buildString(remnumList || return() ""))
-        return(string)
+        unless(remnumList
+            return()
+        )
+        for(i 1 minWidth-length(remnumList)
+            remnumList = cons("0" remnumList)
+        )
+        return(strcat("0b" buildString(remnumList "")))
     )
 )
 

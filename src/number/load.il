@@ -4,6 +4,6 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-ycLoadi("ycDecimalToBinary.il")
+ycLoadi("ycNumToBin.il")
 
 ; END

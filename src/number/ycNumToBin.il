@@ -1,10 +1,10 @@
 ;--------------------------------
-; Program  : skill-utils(ycDecimalToBinary.il)
+; Program  : skill-utils(ycNumToBin.il)
 ; Language : Cadence Skill
 ; Author   : YEUNGCHIE
 ;--------------------------------
 
-procedure(ycDecimalToBinary(num \@optional minWidth(0) "xx")
+procedure(ycNumToBin(num \@optional minWidth(0) "xx")
     prog((remnum remnumList)
         when(zerop(num)
             remnumList = list("0")

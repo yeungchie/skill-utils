@@ -4,7 +4,6 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-alias(d2b               ycDecimalToBinary)
-alias(ycNumberToBinary  ycDecimalToBinary)
+alias(d2b ycNumToBin)
 
 ; END

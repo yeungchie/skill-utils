@@ -12,7 +12,6 @@ ycLoadi("src/ycStringNumAdd.il")
 ycLoadi("src/ycStringIncrease.il")
 ycLoadi("src/ycRange.il")
 ycLoadi("src/ycForeachOnCIW.il")
-ycLoadi("src/ycDecimalToBinary.il")
 ycLoadi("src/ycCat.il")
 ycLoadi("src/ycWriteToFile.il")
 ycLoadi("src/ycReverseTable.il")
@@ -21,5 +20,8 @@ ycLoadi("src/ycPrettyStringArray.il")
 
 ; nth
 ycLoadi("src/nth/load.il")
+
+; number
+ycLoadi("src/number/load.il")
 
 ; END

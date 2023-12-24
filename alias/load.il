@@ -9,6 +9,5 @@ alias(uniq removeListDuplicates)
 alias(des describe)
 alias(strincr ycStringIncrease)
 alias(ciwforeach ycForeachOnCIW)
-alias(d2b ycDecimalToBinary)
 
 ; END

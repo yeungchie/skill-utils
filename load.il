@@ -20,11 +20,6 @@ ycLoadi("src/ycPrettySort.il")
 ycLoadi("src/ycPrettyStringArray.il")
 
 ; nth
-ycLoadi("src/nth/ycLast1.il")
-ycLoadi("src/nth/ycLast2.il")
-ycLoadi("src/nth/ycNthRealIndex.il")
-ycLoadi("src/nth/ycNth.il")
-ycLoadi("src/nth/ycNthReplace.il")
-ycLoadi("src/nth/ycNthRemove.il")
+ycLoadi("src/nth/load.il")
 
 ; END

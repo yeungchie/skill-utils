@@ -19,6 +19,8 @@ ycLoadi("src/ycPrettySort.il")
 ycLoadi("src/ycPrettyStringArray.il")
 ycLoadi("src/ycStrftime.il")
 ycLoadi("src/ycTimeForecast.il")
+ycLoadi("src/ycFlattenMemName.il")
+ycLoadi("src/ycMergeMemName.il")
 
 ; nth
 ycLoadi("src/nth/load.il")

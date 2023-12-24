@@ -22,6 +22,7 @@ ycLoadi("src/ycTimeForecast.il")
 ycLoadi("src/ycFlattenMemName.il")
 ycLoadi("src/ycMergeMemName.il")
 ycLoadi("src/ycReadDesignTree.il")
+ycLoadi("src/ycReadLayerMap.il")
 
 ; nth
 ycLoadi("src/nth/load.il")

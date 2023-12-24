@@ -5,5 +5,5 @@
 ;--------------------------
 
 ycLoadi("ycDecimalToBinary.il")
-alias(d2b ycDecimalToBinary)
+
 ; END

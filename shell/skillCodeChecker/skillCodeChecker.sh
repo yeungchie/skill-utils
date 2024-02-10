@@ -99,4 +99,4 @@ exit(
 EOF
 }
 
-main $@ | perl -lne 'print unless /^INFO\s+\(LoadFile\)/'
+main $@ | grep -vP '^INFO\s+\(LoadFile\)'

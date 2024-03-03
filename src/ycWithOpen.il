@@ -9,22 +9,19 @@
 ;     fprintf( p "write some thing\n" )
 ; )
 
-defmacro( ycWithOpen (
-        _ycWithOpen_formalVar
-        _ycWithOpen_mode
-        _ycWithOpen_fileName
-      \@rest
-        _ycWithOpen_expr
-      "sggg"
-    )
+defmacro( ycWithOpen ( s_formalVar t_mode t_fileName \@rest g_expr "sggg" )
     `{
         ; open
         let((mode fileName port)
-            unless(stringp(mode = eval(,_ycWithOpen_mode))
-                ycError("argument #2 should be a string - %A" mode)
+            unless(stringp(mode = eval(,t_mode))
+                ycError("argument #2 should be a string - %A" mode
+                    ?functionName "ycWithOpen"
+                )
             )
-            unless(stringp(fileName = eval(,_ycWithOpen_fileName))
-                ycError("argument #3 should be a string - %A" fileName)
+            unless(stringp(fileName = eval(,t_fileName))
+                ycError("argument #3 should be a string - %A" fileName
+                    ?functionName "ycWithOpen"
+                )
             )
             port = case(mode
                 (("i" "in" "r" "read" "<")
@@ -37,19 +34,26 @@ defmacro( ycWithOpen (
                     outfile(fileName "a")
                 )
                 (t
-                    ycError("invalid open mode -%A" mode)
+                    ycError("invalid open mode -%A" mode
+                        ?functionName "ycWithOpen"
+                    )
                 )
-            ) || ycError("open failed, cannot access file - %A" fileName)
-            setq(,_ycWithOpen_formalVar port)
+            )
+            unless(port
+                ycError("open failed, cannot access file - %A" fileName
+                    ?functionName "ycWithOpen"
+                )
+            )
+            setq(,s_formalVar port)
         )
 
         prog1(
             ; expr
-            car(errset({nil ,@_ycWithOpen_expr} t))
+            car(errset({nil ,@g_expr} t))
 
             ; close
-            when(portp(,_ycWithOpen_formalVar) && openportp(,_ycWithOpen_formalVar)
-                close(,_ycWithOpen_formalVar)
+            when(portp(,s_formalVar) && openportp(,s_formalVar)
+                close(,s_formalVar)
             )
         )
     }

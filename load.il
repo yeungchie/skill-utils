@@ -23,6 +23,7 @@ ycLoadi("src/ycFlattenMemName.il")
 ycLoadi("src/ycMergeMemName.il")
 ycLoadi("src/ycReadDesignTree.il")
 ycLoadi("src/ycReadLayerMap.il")
+ycLoadi("src/ycWithOpen.il")
 
 ; nth
 ycLoadi("src/nth/load.il")

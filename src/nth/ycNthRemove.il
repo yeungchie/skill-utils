@@ -7,13 +7,23 @@
 procedure(ycNthRemove(i queue "xl")
     let((heads)
         i = ycNthRealIndex(i queue)
-        when(length(queue) > i
-            for(x 0 i
-                heads = cons(car(queue) heads)
+        when(i && length(queue) > i
+            ;       ┌─ 456789
+            ; 123 <─┘
+            for(x 0 i-1
+                heads = tconc(heads car(queue))
                 queue = cdr(queue)
             )
-            foreach(x cdr(heads)
-                queue = cons(x queue)
+
+            ;         ┌ 4 ~
+            ;       ┌─ 56789
+            ; 123 <─┘
+            queue = cdr(queue)
+
+            ;           4 ~
+            ; 12356789
+            when(heads
+                queue = car(nconc(heads queue))
             )
         )
         queue

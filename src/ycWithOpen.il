@@ -10,7 +10,7 @@
 ; )
 
 defmacro( ycWithOpen ( s_formalVar t_mode t_fileName \@rest g_expr "sggg" )
-    `{
+    `let((_ycWithOpen_port)
         ; open
         let((mode fileName port)
             unless(stringp(mode = eval(,t_mode))
@@ -44,7 +44,7 @@ defmacro( ycWithOpen ( s_formalVar t_mode t_fileName \@rest g_expr "sggg" )
                     ?functionName "ycWithOpen"
                 )
             )
-            setq(,s_formalVar port)
+            _ycWithOpen_port = ,s_formalVar = port
         )
 
         prog1(
@@ -52,11 +52,11 @@ defmacro( ycWithOpen ( s_formalVar t_mode t_fileName \@rest g_expr "sggg" )
             car(errset({nil ,@g_expr} t))
 
             ; close
-            when(portp(,s_formalVar) && openportp(,s_formalVar)
-                close(,s_formalVar)
+            when(portp(_ycWithOpen_port) && openportp(_ycWithOpen_port)
+                close(_ycWithOpen_port)
             )
         )
-    }
+    )
 )
 
 ; END

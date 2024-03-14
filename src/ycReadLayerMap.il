@@ -4,7 +4,7 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-; 对字符串表示的数字自增
+; layermap 文件解析
 
 procedure(ycReadLayerMap(\@key file tech libName reverse)
     prog((fileName lib rows map)

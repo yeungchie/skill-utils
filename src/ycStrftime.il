@@ -4,7 +4,7 @@
 ; Author   : YEUNGCHIE
 ;--------------------------
 
-procedure(ycStrftime(format \@optional time(getCurrentTime()) "tg")
+procedure(ycStrftime(\@optional format("%F %T") time(getCurrentTime()) "tg")
     prog((strList specp formatted strOut)
         unless(fixp(time) || stringp(time)
             ycError("argument #2 should be a int number or a string - %A" time)
@@ -54,11 +54,11 @@ procedure(_ycStrftimeReadFormat(type time "tg")
                     ycError("illegal format spec - \"%%%s\"" type)
                 )
             )
-            cond(
-                (member(type list("S" "M" "H" "d" "m" "Y")) && trans < 10
-                    lsprintf("0%d" trans)
+            caseq(type(trans)
+                (fixnum
+                    lsprintf("%02d" trans)
                 )
-                (stringp(trans)
+                (string
                     trans
                 )
                 (t

@@ -4,7 +4,7 @@
 
 ## 项目依赖
 
-+ skill-loader [ [GitHub](https://github.com/yeungchie/skill-loader "https://github.com/yeungchie/skill-loader") / [Gitee](https://gitee.com/yeungchie/skill-loader "https://gitee.com/yeungchie/skill-loader") ]
-+ skill-regex [ [GitHub](https://github.com/yeungchie/skill-regex "https://github.com/yeungchie/skill-regex") / [Gitee](https://gitee.com/yeungchie/skill-regex "https://gitee.com/yeungchie/skill-regex") ]
++ skill-loader [ [GitHub](https://github.com/yeungchie/skill-loader "https://github.com/yeungchie/skill-loader") ]
++ skill-regex [ [GitHub](https://github.com/yeungchie/skill-regex "https://github.com/yeungchie/skill-regex") ]
 
 > 有空再补说明。
